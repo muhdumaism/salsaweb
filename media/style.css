@@ -665,7 +665,30 @@ body {
     padding-left: .75rem;
 }
 
+.server-status-box {
+  margin-top: 10px;
+  padding: 6px 14px;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 1px solid #ffffff33;
+  border-radius: 999px;
+
+  backdrop-filter: blur(8px);
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00ff7f;
+  box-shadow: 0 0 6px #00ff7faa;
+}
 
 
 
