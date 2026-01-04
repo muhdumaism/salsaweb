@@ -12,60 +12,65 @@
     color-scheme: dark;
 }
 
-/* ---------------- BASIC ---------------- */
+/* ================= BASE ================= */
 
-.notice {
-    margin-top: 1rem;
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: #ffaa00;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-span,
 body {
+    margin: 0;
     font-family: 'Space Grotesk', sans-serif;
-}
-
-body {
     background-color: var(--background1);
     color: white;
-    margin: 0;
 }
 
-/* ---------------- ANCHORS ---------------- */
+a {
+    color: inherit;
+}
+
+.headline {
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ================= ANCHOR OFFSET ================= */
 
 #more, #discord, #about, #join {
     padding-top: 5rem;
     margin-top: -5rem;
 }
 
-/* ---------------- NAVBAR ---------------- */
+/* ================= NAVBAR ================= */
 
 .desktop_navbar {
     position: fixed;
-    display: flex;
-    height: 4rem;
+    top: 0;
     width: 100%;
-    background-color: #00000022;
-    backdrop-filter: blur(15px);
-    z-index: 5;
+    height: 4rem;
+    display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #00000022;
+    backdrop-filter: blur(15px);
+    z-index: 10;
 }
 
 .desktop_navbar_logo_img {
     width: 5rem;
-    padding: 0 1rem 0 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
 }
 
 .desktop_navbar_link {
     font-size: 1.2rem;
     padding: .8rem;
-    color: #fff;
     text-decoration: none;
     transition: .3s;
 }
+
 .desktop_navbar_link:hover {
     color: var(--accent1);
 }
@@ -79,12 +84,36 @@ body {
     font-weight: 700;
     transition: .3s;
 }
+
 .desktop_navbar_link2_div:hover {
-    background: var(--accent2);
+    background-color: var(--accent2);
     border-color: var(--accent2);
+    transform: scale(1.05);
 }
 
-/* ---------------- HERO ---------------- */
+/* ================= MOBILE NAV ================= */
+
+.mobile_navbar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: #00000033;
+    backdrop-filter: blur(15px);
+    z-index: 10;
+}
+
+.mobile_navbar_logo_img {
+    height: 42px;
+    padding: 5px;
+}
+
+.mobile_navbar .icon {
+    position: absolute;
+    right: 0;
+    padding: 16px;
+}
+
+/* ================= MAIN ================= */
 
 .mainflex {
     display: flex;
@@ -92,12 +121,15 @@ body {
     align-items: center;
 }
 
+/* ================= HERO ================= */
+
 .main1 {
     padding-top: calc(var(--nice-padding) + 2rem);
     width: 100%;
     text-align: center;
     background: rgba(0,0,0,.5) url('https://imgur.com/cGMLytH.png');
     background-blend-mode: darken;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -105,6 +137,7 @@ body {
     max-width: 40rem;
     transition: .3s;
 }
+
 .main1_logo:hover {
     transform: scale(1.05);
 }
@@ -119,24 +152,25 @@ body {
     font-weight: 800;
 }
 
-/* ---------------- IP BUTTON ---------------- */
+/* ================= IP BUTTON ================= */
 
 .main1_ipcopier {
     padding: 1rem 2rem;
     font-size: 2rem;
-    background: var(--accent2_transp);
-    border-radius: var(--roundness);
+    background-color: var(--accent2_transp);
     border: none;
-    color: #fff;
+    border-radius: var(--roundness);
+    color: white;
     cursor: pointer;
     transition: .3s;
 }
+
 .main1_ipcopier:hover {
-    background: var(--accent2);
+    background-color: var(--accent2);
     transform: scale(1.05);
 }
 
-/* ---------------- SERVER STATUS ---------------- */
+/* ================= SERVER STATUS ================= */
 
 .server-status-box {
     margin-top: 10px;
@@ -148,7 +182,6 @@ body {
     background: rgba(0,0,0,.45);
     border-radius: 999px;
     border: 1px solid #ffffff33;
-    backdrop-filter: blur(8px);
 }
 
 .status-dot {
@@ -157,21 +190,21 @@ body {
     border-radius: 50%;
 }
 
-/* ✅ FIXED */
 .status-online {
     background: #00ff7f;
     box-shadow: 0 0 6px #00ff7faa;
 }
+
 .status-offline {
     background: #ff3b3b;
     box-shadow: 0 0 6px #ff3b3baa;
 }
 
-/* ---------------- FEATURES ---------------- */
+/* ================= FEATURES ================= */
 
 .main2 {
     width: 100%;
-    background: var(--background2);
+    background-color: var(--background2);
     padding-bottom: 2rem;
 }
 
@@ -182,18 +215,42 @@ body {
 }
 
 .main2_feature {
+    background-color: var(--background1);
     width: 18rem;
     height: 24rem;
-    background: var(--background1);
-    border-radius: var(--roundness);
     margin: 1rem;
+    border-radius: var(--roundness);
     transition: .3s;
 }
+
 .main2_feature:hover {
     transform: scale(1.05);
 }
 
-/* ---------------- HOSTING PARTNER (FIXED) ---------------- */
+/* ================= DISCORD ================= */
+
+.main4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= ABOUT ================= */
+
+.main5 {
+    width: 100%;
+    background-color: var(--background2);
+}
+
+/* ================= JOIN ================= */
+
+.main3 {
+    width: 100%;
+    background-color: var(--background1);
+}
+
+/* ================= HOSTING PARTNER ================= */
 
 .hosting-partner {
     width: 100%;
@@ -219,6 +276,7 @@ body {
     box-shadow: 0 10px 35px rgba(0,0,0,.45);
     transition: .3s;
 }
+
 .hosting-card:hover {
     transform: translateY(-6px);
 }
@@ -237,7 +295,6 @@ body {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
-    justify-content: center;
 }
 
 .hosting-btn {
@@ -249,24 +306,24 @@ body {
 
 .hosting-btn.website {
     background: var(--accent1);
-    color: #fff;
 }
+
 .hosting-btn.website:hover {
     background: var(--accent2);
 }
 
 .hosting-btn.discord {
     background: #5865F2;
-    color: #fff;
 }
+
 .hosting-btn.discord:hover {
     background: #4752c4;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ================= FOOTER ================= */
 
 .copyright_div {
-    background: #101010;
+    background-color: #101010;
     padding: 16px;
     text-align: center;
 }
@@ -276,9 +333,11 @@ body {
     text-decoration: none;
 }
 
-/* ---------------- MOBILE ---------------- */
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
     .desktop_navbar { display: none; }
-    .hosting-title { font-size: 1.8rem; }
+    .mobile_navbar { display: flex; }
+    .headline { font-size: 1.9rem; }
+    .main1_logo { max-width: 16rem; }
 }
