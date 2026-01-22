@@ -12,24 +12,38 @@
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- DESKTOP NAVBAR -->
     <nav class="desktop_navbar">
       <a href="#"><img class="desktop_navbar_logo_img" src="media/small-icon-v5.png" alt="logo"></a>
       <a href="index.html" class="desktop_navbar_link">Home</a>
       <a href="#discord" class="desktop_navbar_link">Community</a>
       <a href="#about" class="desktop_navbar_link">About Us</a>
+
+      <!-- STORE ADDED -->
+      <a href="store.html" class="desktop_navbar_link">Store</a>
+
       <div class="desktop_navbar_link2_div">
           <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
       </div>
     </nav>
+
+    <!-- MOBILE NAVBAR -->
     <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/V-logo-small.png" alt="logo"></a>
+      <a href="#" class="mobile_navbar_logo_img_a">
+        <img class="mobile_navbar_logo_img" src="media/V-logo-small.png" alt="logo">
+      </a>
       <div id="mobile_navbar_links">
           <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="index.html">Home</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#more">Community</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">About Us</a>
+
+          <!-- STORE ADDED -->
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="store.html">Store</a>
+
           <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="goals.html">Goals</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
-        </div>
+      </div>
       <div class="icon" onclick="mobile_navbar_link_hider()">
         <i class="fa fa-bars"></i>
       </div>
@@ -250,6 +264,7 @@
 
   </body>
 </html>
+
 
 
 
