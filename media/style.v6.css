@@ -190,17 +190,21 @@ body {
 
 .main1 {
   padding-top: calc(var(--nice-padding) + 2rem);
-  display: flex;
+  min-height: 100vh;
   width: 100%;
-  align-self: center;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5) url('https://imgur.com/cGMLytH.png');
-  background-blend-mode: darken;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('bg.png');
+
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .main1_logo_a {
